@@ -1,3 +1,12 @@
+#img-con {
+    margin: 0;
+    padding: 0;
+    // position: absolute;
+    height: 100vh;
+    width: 10vw;
+    z-index: -1;
+}
+
 #title-con h1 {
     color: var(--brown);
 }
@@ -14,15 +23,6 @@
 
 #letter-con {
     margin: 4vmin;
-}
-
-#img-con {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    z-index: -1;
 }
 
 #img-con>img {

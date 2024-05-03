@@ -17,12 +17,25 @@
     --olivine: rgba(172, 192, 154, 1);
 }
 
+app-root,
+html,
 body {
-    background: linear-gradient(180deg, var(--platinum) -9.67%, var(--sage) 76.89%);
-    height: 300vh;
+    background: transparent;
+    height: 100%;
     margin: 0;
+    width: 10vw;
     padding: 0;
 }
+
+// body {
+//     display: block;
+//     position: relative;
+//     background: linear-gradient(180deg, var(--platinum) -9.67%, var(--sage) 76.89%);
+//     // height: 50vh;
+//     width: 10px;
+//     // margin: 0;
+//     // padding: 0;
+// }
 
 h1 {
     font-size: xxx-large;
