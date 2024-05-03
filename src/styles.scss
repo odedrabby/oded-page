@@ -5,6 +5,23 @@
     font-family: "Amatic SC", sans-serif;
     font-weight: 700;
     font-style: normal;
+
+    // colors
+    --french-gray: rgba(180, 183, 193, 1);
+    --platinum: rgba(215, 221, 229, 1);
+    --platinum-2: rgba(232, 236, 232, 1);
+    --reseda-green: rgba(122, 145, 114, 1);
+    --reseda-green-2: rgba(124, 133, 109, 1);
+    --sage: rgba(204, 198, 143, 1);
+    --brown: rgba(162, 139, 106, 1);
+    --olivine: rgba(172, 192, 154, 1);
+}
+
+body {
+    background: linear-gradient(180deg, var(--platinum) -9.67%, var(--sage) 76.89%);
+    height: 300vh;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {

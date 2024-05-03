@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
     styleUrl: './letter.component.scss'
 })
 export class LetterComponent {
+    readonly imgPath = 'assets/main-background.jpg'
     readonly title = 'שם זמני - גל כהן פרירא';
     readonly subtitle = 'מכתב מגל';
     readonly letter1 = `שלום אנשים יקרים מאוד,`
