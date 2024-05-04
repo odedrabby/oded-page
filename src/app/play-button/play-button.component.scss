@@ -1,5 +1,23 @@
 button {
-    background: transparent;
+    position: relative;
+    border-radius: 50%;
+    background: var(--light-pink);
     border: none;
+    -webkit-tap-highlight-color: transparent;
     cursor: pointer;
+}
+
+button:active {
+    background: var(--dark-pink);
+}
+
+#icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-37%, -47%);
+}
+
+button > svg > path {
+    fill: var(--pink);
 }

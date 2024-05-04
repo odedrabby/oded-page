@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-song-name',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './song-name.component.scss'
 })
 export class SongNameComponent {
+  @Input() name?: string = 'missoing';
 
 }

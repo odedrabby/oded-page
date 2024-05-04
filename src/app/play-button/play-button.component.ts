@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, SimpleChanges } from '@angular/core';
 
 @Component({
     selector: 'app-play-button',
@@ -7,9 +7,11 @@ import { Component, Input } from '@angular/core';
 })
 export class PlayButtonComponent {
     @Input() size?: number;
+    iconSize?: number;
 
-    ngAfterViewInit() {
-        console.log(this.size)
+    ngOnChanges(changes: SimpleChanges) {
+        if (changes['size']) {
+            this.iconSize = this.size ? this.size / 2 : 0;
+        }
     }
-
 }
