@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { seasonsLyrics } from '../assets/strings';
+import { seasonsLyrics, springLyrics } from '../assets/strings';
 
 @Component({
     selector: 'app-root',
@@ -8,6 +8,12 @@ import { seasonsLyrics } from '../assets/strings';
 })
 export class AppComponent {
     title = 'GalsLandingPage';
+
     seasonsName = "עונות"
     seasonsLyrics = seasonsLyrics
+    seasonsWidth = 120
+    
+    springName = "כשלונו של האביב"
+    springWidth = 220
+    springLyrics = springLyrics
 }

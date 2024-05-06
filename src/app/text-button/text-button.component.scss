@@ -1,19 +1,25 @@
 
 #con {
+    height: 50px;
+    border-radius: 200px;
     background: var(--pink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
 }
 
-#song-name-con {
+#text-button-con {
+    flex: 1;
     height: inherit;
-    width: 65%;
-    left: 10%;
-    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+app-download-button ,
 app-play-button {
+    right: 5px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);

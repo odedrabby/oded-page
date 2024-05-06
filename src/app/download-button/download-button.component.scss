@@ -1,0 +1,20 @@
+
+button {
+    position: relative;
+    border-radius: 50%;
+    background: var(--light-pink);
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+}
+
+#icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button > svg > path {
+    stroke: var(--pink);
+}

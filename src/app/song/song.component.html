@@ -1,5 +1,6 @@
 <div id="con">
-    <app-song-name [name]="songName"></app-song-name>
+    <app-text-button [name]="songName" [width]="songNameWidth"></app-text-button>
     <app-lyrics-box [lyrics]="songLyrics"></app-lyrics-box>
     <app-video-box *ngIf="isVideo"></app-video-box>
+    <app-text-button [name]="downloadText" [width]="120" [type]="downloadButton"></app-text-button>
 </div>
