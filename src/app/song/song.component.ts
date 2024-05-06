@@ -7,5 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class SongComponent {
   @Input() songName: string = "songName"
-  @Input() songLyrics: string[] = ["songlyrics"]
+  @Input() songLyrics: string[] = ["songLyrics"]
+  @Input() isVideo?: boolean;
+  
 }

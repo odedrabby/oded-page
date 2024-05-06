@@ -1,9 +1,22 @@
-#space {
-    height: 40px;
+#con {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 app-lyrics-box {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+app-song-name {
+    position: sticky;
+    align-self: flex-start;
+    z-index: 20;
+    margin-top: 40px;
+    top: 40px;
+    right: 20px;
 }

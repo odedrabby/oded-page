@@ -1,4 +1,5 @@
-<div id="space"></div>
-<app-song-name [name]="songName"></app-song-name>
-<div id="space"></div>
-<app-lyrics-box [lyrics]="songLyrics"></app-lyrics-box>
+<div id="con">
+    <app-song-name [name]="songName"></app-song-name>
+    <app-lyrics-box [lyrics]="songLyrics"></app-lyrics-box>
+    <app-video-box *ngIf="isVideo"></app-video-box>
+</div>
