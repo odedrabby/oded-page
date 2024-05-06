@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { seasonsLyrics } from '../assets/strings';
 
 @Component({
     selector: 'app-root',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
     title = 'GalsLandingPage';
+    seasonsName = "עונות"
+    seasonsLyrics = seasonsLyrics
 }

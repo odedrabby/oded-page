@@ -1,6 +1,8 @@
-<div id="con">
-    <p id="song-name">
-        {{ name }}
-    </p>
-    <app-play-button [size]="100"></app-play-button>
+<div id="con" [style.border-radius]="(size * 4) + 'px'" [style.width]="(size * 3.4) + 'px'" [style.height]="size + 'px'">
+    <div id="song-name-con" >
+        <h2>
+            {{ name }}
+        </h2>
+    </div>
+    <app-play-button [style.right]="iconRight" [size]="size * 0.8"></app-play-button>
 </div>

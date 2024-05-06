@@ -1,3 +1,9 @@
+
+
+#letter-con {
+    height: 100vh;
+}
+
 #img-con {
     margin: 0;
     padding: 0;
@@ -7,11 +13,11 @@
     z-index: -1;
 }
 
-#title-con h1 {
+#title-con > h1 {
     color: var(--brown);
 }
 
-#letter-con h2 {
+#letter-con > h2 {
     color: var(--reseda-green);
 }
 
@@ -21,7 +27,7 @@
     align-items: center;
 }
 
-#letter-con {
+#letter-text-con {
     margin: 4vmin;
 }
 

@@ -1,0 +1,8 @@
+<div id="con" [style.height]="height">
+  <div id="test-con">
+    <p *ngFor="let l of lyrics">
+        {{ l }}
+    </p>
+  </div>
+  <button (click)="toggle()"> expand</button>
+</div>

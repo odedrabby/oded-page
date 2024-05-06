@@ -1,13 +1,24 @@
-// del
-:host {
-    height: 46px;
-    width: 170;
-    fill: #B4B7C1;
-}
 
 #con {
-    position: relative;
+    position: sticky;
+    z-index: 20;
+    top: 100px;
+    right: 20px;
+    background: var(--pink);
+}
+
+#song-name-con {
+    height: inherit;
+    width: 65%;
+    left: 10%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 app-play-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }

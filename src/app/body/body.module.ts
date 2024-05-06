@@ -4,6 +4,7 @@ import { LetterComponent } from '../letter/letter.component';
 import { SongNameComponent } from '../song-name/song-name.component';
 import { SongComponent } from '../song/song.component';
 import { PlayButtonComponent } from '../play-button/play-button.component';
+import { lyricsBoxComponent } from '../lyrics-box/lyrics-box.component';
 
 
 
@@ -13,6 +14,7 @@ import { PlayButtonComponent } from '../play-button/play-button.component';
         SongNameComponent,
         SongComponent,
         PlayButtonComponent,
+        lyricsBoxComponent,
     ],
     imports: [
         CommonModule,
