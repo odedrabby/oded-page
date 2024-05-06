@@ -13,13 +13,30 @@
     margin: 40px;
 }
 
-#test-con {
+#text-con {
     height: 95%;
     overflow: hidden;
 }
 
+button .dot {
+    background: black;
+    border-radius: 50%;
+    height: 3px;
+    aspect-ratio: 1/1;
+}
+
 button {
+    background: var(--pink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    height: 20px;
+    width: 80px;
+    border: none;
+    border-radius: 20px;
     position: absolute;
     bottom: 20px;
     left: 50%;
+    transform: translateX(-50%);
 }

@@ -29,6 +29,10 @@ body {
     padding: 0;
 }
 
+button:active {
+    box-shadow: inset 1000px 1000px rgba(0, 0, 0, 0.05);
+}
+
 h1 {
     font-size: xxx-large;
 }

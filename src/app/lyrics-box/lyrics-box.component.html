@@ -1,8 +1,12 @@
 <div id="con" [style.height]="height">
-  <div id="test-con">
+  <div id="text-con">
     <p *ngFor="let l of lyrics">
         {{ l }}
     </p>
   </div>
-  <button (click)="toggle()"> expand</button>
+  <button (click)="toggle()"> 
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </button>
 </div>
