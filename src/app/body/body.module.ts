@@ -7,6 +7,7 @@ import { PlayButtonComponent } from '../play-button/play-button.component';
 import { lyricsBoxComponent } from '../lyrics-box/lyrics-box.component';
 import { VideoBoxComponent } from '../video-box/video-box.component';
 import { DownloadButtonComponent } from '../download-button/download-button.component';
+import { ShowComponent } from '../show/show.component';
 
 
 
@@ -19,13 +20,15 @@ import { DownloadButtonComponent } from '../download-button/download-button.comp
         lyricsBoxComponent,
         VideoBoxComponent,
         DownloadButtonComponent,
+        ShowComponent,
     ],
     imports: [
         CommonModule,
     ],
     exports: [
         LetterComponent,
-        SongComponent
+        SongComponent,
+        ShowComponent,
     ]
 })
 export class BodyModule { }
