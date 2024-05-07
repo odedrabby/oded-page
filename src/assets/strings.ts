@@ -26,3 +26,10 @@ export const springLyrics = [
     '21:00 ב18 לאוגוסט',
     'יהיה טירוףף',
   ]
+
+  export  const  seasonsName = "עונות"
+
+  export    const springName = "כשלונו של האביב"
+     
+  export const seasonsPath = "assets/seasons.mp3"
+  export const springPath = "assets/spring.mp3"

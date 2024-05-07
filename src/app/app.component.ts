@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { seasonsLyrics, springLyrics } from '../assets/strings';
+import { seasonsLyrics, seasonsName, springLyrics, springName } from '../assets/strings';
 
 @Component({
     selector: 'app-root',
@@ -9,12 +9,12 @@ import { seasonsLyrics, springLyrics } from '../assets/strings';
 export class AppComponent {
     title = 'GalsLandingPage';
 
-    seasonsName = "עונות"
+    seasonsName = seasonsName
     seasonsLyrics = seasonsLyrics
     seasonsWidth = 120
     seasonsPath = 'assets/text.txt'
     
-    springName = "כשלונו של האביב"
+    springName = springName
     springWidth = 220
     springLyrics = springLyrics
     springPath = 'assets/text.txt'

@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Input, Output, SimpleChanges } from '@angular/core';
+import { Component, Input, SimpleChanges } from '@angular/core';
+import { SharedService } from '../shared.service';
 
 @Component({
     selector: 'app-play-button',
@@ -6,11 +7,11 @@ import { Component, EventEmitter, Input, Output, SimpleChanges } from '@angular/
     styleUrl: './play-button.component.scss'
 })
 export class PlayButtonComponent {
-    @Output() onClick = new EventEmitter<string>();
-    // @Input() handler?: (src: string) => void
     @Input() songName?: string;
     @Input() size?: number;
     iconSize?: number;
+
+    constructor(private ss: SharedService) {}
 
     ngOnChanges(changes: SimpleChanges) {
         if (changes['size']) {
@@ -18,13 +19,8 @@ export class PlayButtonComponent {
         }
     }
 
-    // TODO
-    click = () => {
-        this.onClick.emit(this.songName)
+    clickPlay = () => {
+        if (!this.songName) return
+        this.ss.sendMessage(this.songName);
     }
-
-    // TODO
-    // callHandler() {
-    //     this.handler && this.handler('')
-    // }
 }
