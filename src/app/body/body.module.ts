@@ -9,6 +9,7 @@ import { VideoBoxComponent } from '../video-box/video-box.component';
 import { DownloadButtonComponent } from '../download-button/download-button.component';
 import { ShowComponent } from '../show/show.component';
 import { MusicPlayerComponent } from '../music-player/music-player.component';
+import { TimeBarComponent } from '../time-bar/time-bar.component';
 
 
 
@@ -23,6 +24,7 @@ import { MusicPlayerComponent } from '../music-player/music-player.component';
         DownloadButtonComponent,
         ShowComponent,
         MusicPlayerComponent,
+        TimeBarComponent,
     ],
     imports: [
         CommonModule,

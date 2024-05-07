@@ -9,3 +9,10 @@ app-play-button {
     right: 10px;
     top: 8px;
 }
+
+app-time-bar {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
