@@ -63,4 +63,11 @@ export class MusicPlayerComponent {
     this.play()
   }
 
+  seek = (percent: number) => {
+    if (!this.playerRef) return
+
+    const newTime = this.playerRef.nativeElement.duration * (percent / 100)
+    this.playerRef.nativeElement.currentTime = newTime
+  }
+
 }
