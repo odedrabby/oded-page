@@ -8,6 +8,7 @@ import { lyricsBoxComponent } from '../lyrics-box/lyrics-box.component';
 import { VideoBoxComponent } from '../video-box/video-box.component';
 import { DownloadButtonComponent } from '../download-button/download-button.component';
 import { ShowComponent } from '../show/show.component';
+import { MusicPlayerComponent } from '../music-player/music-player.component';
 
 
 
@@ -21,6 +22,7 @@ import { ShowComponent } from '../show/show.component';
         VideoBoxComponent,
         DownloadButtonComponent,
         ShowComponent,
+        MusicPlayerComponent,
     ],
     imports: [
         CommonModule,
@@ -28,6 +30,7 @@ import { ShowComponent } from '../show/show.component';
     exports: [
         LetterComponent,
         SongComponent,
+        MusicPlayerComponent,
         ShowComponent,
     ]
 })
