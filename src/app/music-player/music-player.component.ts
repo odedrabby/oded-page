@@ -3,10 +3,7 @@ import { SharedService } from '../shared.service';
 import { Subscription } from 'rxjs';
 import { seasonsName, seasonsPath, springName, springPath } from '../../assets/strings';
 
-export enum MusicPlayerActions {
-  PLAY_SEASONS = "PLAY_SEASONS",
-  PLAY_SPRING = "PLAY_SPRING",
-}
+export const playPause = "playPause"
 
 @Component({
   selector: 'app-music-player',
@@ -31,13 +28,21 @@ export class MusicPlayerComponent {
 
   ngAfterViewInit() {
     if (!this.playerRef) return
-    this.playerRef.nativeElement.src = "assets/seasons.mp3"
-    // this.playerRef.nativeElement.load()
+    this.playerRef.nativeElement.src = seasonsPath
   }
 
   handleEvent = (msg: string) => {
-    if (msg === seasonsName) this.loadTrack(seasonsPath)
-    if (msg === springName) this.loadTrack(springPath)
+    switch (msg) {
+      case seasonsName:
+        this.loadTrack(seasonsPath)
+        break
+      case springName:
+        this.loadTrack(springPath)
+        break
+      case playPause:
+        this.playPause()
+        break
+    }
   }
 
   playPause = () => {
@@ -55,7 +60,6 @@ export class MusicPlayerComponent {
   loadTrack = (src: string) => {
     if (!this.playerRef) return
     this.playerRef.nativeElement.src = src
-    // this.playerRef.nativeElement.load()
     this.play()
   }
 

@@ -1,5 +1,6 @@
 import { Component, Input, SimpleChanges } from '@angular/core';
 import { SharedService } from '../shared.service';
+import { playPause } from '../music-player/music-player.component';
 
 @Component({
     selector: 'app-play-button',
@@ -7,6 +8,7 @@ import { SharedService } from '../shared.service';
     styleUrl: './play-button.component.scss'
 })
 export class PlayButtonComponent {
+    @Input() isPlaying?: boolean;
     @Input() songName?: string;
     @Input() size?: number;
     iconSize?: number;
@@ -19,8 +21,11 @@ export class PlayButtonComponent {
         }
     }
 
-    clickPlay = () => {
-        if (!this.songName) return
-        this.ss.sendMessage(this.songName);
+    click = () => {
+        if (this.songName) {
+            this.ss.sendMessage(this.songName);
+        } else {
+            this.ss.sendMessage(playPause);
+        }
     }
 }

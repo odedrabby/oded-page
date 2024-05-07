@@ -1,8 +1,33 @@
-<button (click)="clickPlay()" [style.height]="size + 'px'"
+<button
+    (click)="click()"
+    [style.height]="size + 'px'"
     [style.width]="size + 'px'">
-    <svg id="icon" [style.height]="iconSize" [style.width]="iconSize"
-        viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+        *ngIf="!isPlaying"
+        id="icon-play"
+        [style.height]="iconSize"
+        [style.width]="iconSize"
+        viewBox="0 0 10 13"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg">
         <path
             d="M9.09626 5.74281C9.64253 6.1423 9.64253 6.95769 9.09626 7.35718L1.66531 12.7915C1.00464 13.2747 0.0750122 12.8028 0.0750122 11.9843L0.0750122 1.11566C0.0750122 0.297167 1.00464 -0.17468 1.66531 0.308479L9.09626 5.74281Z" />
+
+    </svg>
+
+    <svg
+        *ngIf="isPlaying"
+        id="icon-pause"
+        [style.height]="40 + 'px'"
+        [style.width]="40 + 'px'"
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+            d="M23 14.5C23 13.6716 23.6716 13 24.5 13C25.3284 13 26 13.6716 26 14.5V26.5C26 27.3284 25.3284 28 24.5 28C23.6716 28 23 27.3284 23 26.5V14.5Z"
+            fill="#C99A9A" />
+        <path
+            d="M14 14.5C14 13.6716 14.6716 13 15.5 13C16.3284 13 17 13.6716 17 14.5V26.5C17 27.3284 16.3284 28 15.5 28C14.6716 28 14 27.3284 14 26.5V14.5Z"
+            fill="#C99A9A" />
     </svg>
 </button>

@@ -7,14 +7,20 @@ button {
     cursor: pointer;
 }
 
-
-#icon {
+#icon-play {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-37%, -47%);
 }
 
-button > svg > path {
+#icon-pause {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button>svg>path {
     fill: var(--pink);
 }
