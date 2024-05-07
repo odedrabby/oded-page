@@ -12,10 +12,10 @@ export class AppComponent {
     seasonsName = "עונות"
     seasonsLyrics = seasonsLyrics
     seasonsWidth = 120
-    seasonsPath = ''
+    seasonsPath = 'assets/text.txt'
     
     springName = "כשלונו של האביב"
     springWidth = 220
     springLyrics = springLyrics
-    springPath = ''
+    springPath = 'assets/text.txt'
 }
