@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component,  Input } from '@angular/core';
 import { TextButtonComponentIcon } from '../text-button/text-button.component';
 
 @Component({
