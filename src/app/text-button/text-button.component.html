@@ -1,5 +1,5 @@
 <div id="con" [style.width]="width + 'px'">
-    <div id="text-button-con" >
+    <div id="text-button-con">
         <h2>
             {{ name }}
         </h2>
@@ -7,5 +7,10 @@
     <div id="dummy" [style.width]="35 + 'px'">
     </div>
     <app-play-button *ngIf="isPlay" [size]="40"></app-play-button>
-    <app-download-button *ngIf="isDownload" [size]="40"></app-download-button>
+    <app-download-button
+        *ngIf="isDownload"
+        [size]="40"
+        [pathToFile]="pathToFile"
+        [fileName]="fileName">
+    </app-download-button>
 </div>

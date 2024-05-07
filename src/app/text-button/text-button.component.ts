@@ -11,6 +11,8 @@ export enum TextButtonComponentIcon {
   styleUrl: './text-button.component.scss'
 })
 export class TextButtonComponent {
+  @Input() pathToFile?: string;
+  @Input() fileName?: string;
   @Input() name?: string;
   @Input() width?: number;
   @Input() type: TextButtonComponentIcon = TextButtonComponentIcon.PLAY

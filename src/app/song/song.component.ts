@@ -7,11 +7,12 @@ import { TextButtonComponentIcon } from '../text-button/text-button.component';
   styleUrl: './song.component.scss'
 })
 export class SongComponent {
+  @Input() pathToFile?: string;
   @Input() songNameWidth?: number;
   @Input() downloadText: string = "WAV"
   @Input() songName: string = "songName"
   @Input() songLyrics: string[] = ["songLyrics"]
   @Input() isVideo?: boolean;
   downloadButton = TextButtonComponentIcon.DOWNLOAD
-  
+
 }
