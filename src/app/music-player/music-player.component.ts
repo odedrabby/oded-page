@@ -48,6 +48,11 @@ export class MusicPlayerComponent {
   }
 
   onCurrentTimeChange() {
+    if (this.playerRef.nativeElement.currentTime === this.playerRef.nativeElement.duration) {
+      this.pause()
+      this.playerRef.nativeElement.currentTime = 0
+    }
+
     const currentTime = this.playerRef.nativeElement.currentTime;
     this.percent = currentTime / this.playerRef.nativeElement.duration * 100
   }
@@ -76,6 +81,12 @@ export class MusicPlayerComponent {
     if (!this.playerRef) return
     this.playerRef.nativeElement.play()
     this.isPlaying = true
+  }
+
+  pause = () => {
+    if (!this.playerRef) return
+    this.playerRef.nativeElement.pause()
+    this.isPlaying = false
   }
 
   loadTrack = (src: string) => {
