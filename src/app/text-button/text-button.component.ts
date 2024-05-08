@@ -1,4 +1,5 @@
-import { Component,  Input } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
+import { PlayButtonComponent } from '../play-button/play-button.component';
 
 export enum TextButtonComponentIcon {
   PLAY,
@@ -16,6 +17,12 @@ export class TextButtonComponent {
   @Input() name?: string;
   @Input() width?: number;
   @Input() type: TextButtonComponentIcon = TextButtonComponentIcon.PLAY
+  @ViewChild(PlayButtonComponent) childComponentRef!: PlayButtonComponent;
+
+
+  click = () => {
+    this.childComponentRef.click()
+  }
 
   get isPlay(): boolean {
     return this.type === TextButtonComponentIcon.PLAY
