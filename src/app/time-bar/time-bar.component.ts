@@ -13,6 +13,7 @@ export class TimeBarComponent {
   @Input() percent!: number
   @Output() dotEvent = new EventEmitter<number>();
   @ViewChild("bar") bar?: ElementRef<HTMLDivElement>
+  @ViewChild("dot") dot?: ElementRef<HTMLDivElement>
 
   private renderer: Renderer2;
   isDown = false
@@ -23,7 +24,6 @@ export class TimeBarComponent {
 
   @HostListener('document:mousemove', ['$event'])
   onMouseMove(e: MouseEvent) {
-    // TODO check on normal page
     this.sendPercent(e.x)
   }
 
@@ -50,7 +50,7 @@ export class TimeBarComponent {
     const screen = this.getScreenWidth()
     const offset = (screen - rect.width) / 2
 
-    const newX = clamp(mouseX - offset, 0, rect.width)
+    const newX = clamp(mouseX - offset, 0, (rect.width))
 
     const localPercent = newX * 100 / rect.width
 
@@ -58,12 +58,14 @@ export class TimeBarComponent {
   }
 
   getLeft = (percent: number): string => {
-    if (!this.bar || !percent) {
+    if (!this.dot || !this.bar || !percent) {
       return '0'
     }
     const rect = this.bar.nativeElement.getBoundingClientRect();
+    const dotRect = this.dot.nativeElement.getBoundingClientRect();
+    const width = (rect.width - dotRect.width)
 
-    const newX = rect.width / 100 * percent
+    const newX = (width) / 100 * percent
     return `${newX}px`;
   }
 
