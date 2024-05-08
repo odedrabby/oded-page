@@ -1,7 +1,8 @@
 #con {
+    border: var(--grass-green-dark) solid 3px;
     position: relative;
     width: 100%;
-    background: radial-gradient(151.86% 151.86% at 50% 50%, #ACC09A 0%, #A28B6A 100%);
+    background: var(--grass-green);
     border-radius: var(--br);
     display: flex;
     flex-direction: column;
@@ -28,17 +29,17 @@ button .dot {
 }
 
 button {
-    background: var(--pink);
+    background: var(--grass-green-dark);
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8px;
-    height: 20px;
+    height: 17px;
     width: 80px;
     border: none;
     border-radius: var(--br);
     position: absolute;
-    bottom: 20px;
+    bottom: 14px;
     left: 50%;
     transform: translateX(-50%);
 }

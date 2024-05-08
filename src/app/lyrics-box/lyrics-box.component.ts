@@ -11,7 +11,7 @@ export class lyricsBoxComponent {
   isOpen: boolean = false
 
   get height() :string {
-    return this.isOpen ? '' : "45vh"
+    return this.isOpen ? '' : "35vh"
   }
 
   toggle() {

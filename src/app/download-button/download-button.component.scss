@@ -1,7 +1,8 @@
 button {
     position: relative;
     border-radius: 50%;
-    background: var(--light-pink);
+    background: var(--sky-blue);
+    box-shadow: inset 200px 200px rgba($color: #ffffff, $alpha: .4);
     border: none;
     -webkit-tap-highlight-color: transparent;
     cursor: pointer;
@@ -19,5 +20,5 @@ button {
 }
 
 button>svg>path {
-    stroke: var(--pink);
+    stroke: var(--sky-blue);
 }

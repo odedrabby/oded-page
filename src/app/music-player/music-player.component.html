@@ -1,6 +1,14 @@
 <svg viewBox="0 0 360 97" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
-        d="M272.561 42C279.964 42 286.82 38.1023 290.606 31.7412L303.684 9.77032C307.29 3.71206 313.82 0 320.87 0H360V97H0V42H272.561Z" />
+        d="M272.561 42C279.964 42 286.82 38.1023 290.606 31.7412L303.684 9.77032C307.29 3.71206 313.82 0 320.87 0H360V97H0V42H272.561Z"
+        fill="url(#paint0_linear_71_9)" />
+    <defs>
+        <lineargradient id="paint0_linear_71_9" x1="235.299" y1="-33.2883"
+            x2="81.7008" y2="193.788" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#B1BBC5" />
+            <stop offset="0.790824" stop-color="#A07E5E" />
+        </lineargradient>
+    </defs>
 </svg>
 <app-play-button [isPlaying]="isPlaying"></app-play-button>
 <app-time-bar [percent]="percent" (dotEvent)="seek($event)"></app-time-bar>
