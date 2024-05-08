@@ -1,9 +1,14 @@
 #con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10px;
     width: 80vw;
 }
 
 #bar {
     height: 2px;
+    width: 100%;
     border-radius: 200px;
     background: black;
 }

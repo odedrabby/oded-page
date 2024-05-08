@@ -1,7 +1,6 @@
-<div id="con">
+<div id="con" (pointerdown)="mousedown($event)">
     <div #bar id="bar">
         <div id="dot"
-            (pointerdown)="mousedown()"
             [style.left]="getLeft(percent)">
         </div>
     </div>

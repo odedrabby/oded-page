@@ -75,8 +75,9 @@ export class TimeBarComponent {
     this.isDown = false
   }
 
-  mousedown = () => {
+  mousedown = (e: PointerEvent) => {
     this.isDown = true
+    this.sendPercent(e.x)
   }
 }
 
