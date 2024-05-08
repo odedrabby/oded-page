@@ -11,24 +11,45 @@ export const playPause = "playPause"
   styleUrl: './music-player.component.scss'
 })
 export class MusicPlayerComponent {
-  @ViewChild("player") playerRef?: ElementRef<HTMLAudioElement>
+  @ViewChild("player") playerRef!: ElementRef<HTMLAudioElement>
+  percent = 0
   isPlaying: boolean = false
 
   private messageSubscription!: Subscription;
-  
-  constructor(private ss: SharedService) {}
+
+  private currentTimeListener: (() => void) | undefined;
+
+  constructor(private ss: SharedService) { }
 
   ngOnInit() {
     this.messageSubscription = this.ss.message$.subscribe(this.handleEvent);
   }
 
-  ngOnDestroy() {
-    this.messageSubscription.unsubscribe();
+  ngAfterViewInit() {
+    this.playerRef.nativeElement.src = seasonsPath
+
+    const audioElement = this.playerRef.nativeElement;
+
+    this.currentTimeListener = () => {
+      this.onCurrentTimeChange();
+    };
+
+    audioElement.addEventListener('timeupdate', this.currentTimeListener);
+
   }
 
-  ngAfterViewInit() {
-    if (!this.playerRef) return
-    this.playerRef.nativeElement.src = seasonsPath
+  ngOnDestroy() {
+    this.messageSubscription.unsubscribe()
+
+    if (this.currentTimeListener) {
+      const audioElement = this.playerRef.nativeElement;
+      audioElement.removeEventListener('timeupdate', this.currentTimeListener);
+    }
+  }
+
+  onCurrentTimeChange() {
+    const currentTime = this.playerRef.nativeElement.currentTime;
+    this.percent = currentTime / this.playerRef.nativeElement.duration * 100
   }
 
   handleEvent = (msg: string) => {
@@ -64,8 +85,6 @@ export class MusicPlayerComponent {
   }
 
   seek = (percent: number) => {
-    if (!this.playerRef) return
-
     const newTime = this.playerRef.nativeElement.duration * (percent / 100)
     this.playerRef.nativeElement.currentTime = newTime
   }

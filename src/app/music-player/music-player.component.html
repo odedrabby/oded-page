@@ -3,5 +3,5 @@
         d="M272.561 42C279.964 42 286.82 38.1023 290.606 31.7412L303.684 9.77032C307.29 3.71206 313.82 0 320.87 0H360V97H0V42H272.561Z" />
 </svg>
 <app-play-button [size]="40" [isPlaying]="isPlaying"></app-play-button>
-<app-time-bar (dotEvent)="seek($event)"></app-time-bar>
+<app-time-bar [percent]="percent" (dotEvent)="seek($event)"></app-time-bar>
 <audio #player></audio>
