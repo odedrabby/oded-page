@@ -1,5 +1,3 @@
-
-
 #letter-con {
     height: 100vh;
 }
@@ -11,13 +9,15 @@
     height: 100vh;
     width: 100%;
     z-index: -1;
+    overflow: hidden;
 }
 
-#title-con > h1 {
+h1 {
+    height: 25px;
     color: var(--brown);
 }
 
-#letter-con > h2 {
+h2 {
     color: var(--reseda-green);
 }
 
@@ -32,6 +32,7 @@
 }
 
 #img-con>img {
+    min-height: 1000px;
     height: 100%;
     width: 100%;
     object-position: 85% center;
