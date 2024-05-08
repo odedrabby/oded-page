@@ -8,12 +8,10 @@
     </div>
     <app-play-button
         *ngIf="isPlay"
-        [songName]="name"
-        [size]="40">
+        [songName]="name">
     </app-play-button>
     <app-download-button
         *ngIf="isDownload"
-        [size]="40"
         [pathToFile]="pathToFile"
         [fileName]="fileName">
     </app-download-button>

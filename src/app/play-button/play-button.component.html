@@ -1,12 +1,8 @@
 <button
-    (click)="click()"
-    [style.height]="size + 'px'"
-    [style.width]="size + 'px'">
+    (click)="click()">
     <svg
         *ngIf="!isPlaying"
         id="icon-play"
-        [style.height]="iconSize"
-        [style.width]="iconSize"
         viewBox="0 0 10 13"
         fill="none"
         xmlns="http://www.w3.org/2000/svg">
@@ -18,8 +14,6 @@
     <svg
         *ngIf="isPlaying"
         id="icon-pause"
-        [style.height]="40 + 'px'"
-        [style.width]="40 + 'px'"
         viewBox="0 0 40 40"
         fill="none"
         xmlns="http://www.w3.org/2000/svg">

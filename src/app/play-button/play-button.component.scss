@@ -5,9 +5,13 @@ button {
     border: none;
     -webkit-tap-highlight-color: transparent;
     cursor: pointer;
+    width: 100%;
+    height: 100%;
 }
 
 #icon-play {
+    height: 50%;
+    aspect-ratio: 1/1;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -15,6 +19,8 @@ button {
 }
 
 #icon-pause {
+    height: 110%;
+    aspect-ratio: 1/1;
     position: absolute;
     top: 50%;
     left: 50%;
