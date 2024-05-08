@@ -1,5 +1,4 @@
 #con {
-    height: 50px;
     border-radius: 200px;
     background: var(--sky-blue);
     display: flex;
@@ -13,7 +12,6 @@
 #con:active {
     box-shadow: inset 1000px 1000px rgba(0, 0, 0, 0.05);
 }
-
 
 #text-button-con {
     flex: 1;
@@ -31,4 +29,9 @@ app-play-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+}
+
+app-download-button {
+    height: 23px;
+    right: 4px;
 }

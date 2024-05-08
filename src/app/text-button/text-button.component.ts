@@ -15,6 +15,7 @@ export class TextButtonComponent {
   @Input() pathToFile?: string;
   @Input() fileName?: string;
   @Input() name?: string;
+  @Input() height?: number;
   @Input() width?: number;
   @Input() type: TextButtonComponentIcon = TextButtonComponentIcon.PLAY
   @ViewChild(PlayButtonComponent) childComponentRef!: PlayButtonComponent;

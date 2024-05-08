@@ -1,10 +1,15 @@
-<div (click)="click()" id="con" [style.width]="width + 'px'">
+<div (click)="click()" id="con"
+    [style.width]="width + 'px'"
+    [style.height]="height + 'px'">
     <div id="text-button-con">
-        <h2>
+        <h2 *ngIf="!isDownload">
             {{ name }}
         </h2>
+        <h3 *ngIf="isDownload">
+            {{ name }}
+        </h3>
     </div>
-    <div id="dummy" [style.width]="35 + 'px'">
+    <div id="dummy" [style.width]="isDownload ? 20 + 'px' : 35 + 'px'">
     </div>
     <app-play-button
         *ngIf="isPlay"
@@ -12,6 +17,7 @@
     </app-play-button>
     <app-download-button
         *ngIf="isDownload"
+        [height]="height"
         [pathToFile]="pathToFile"
         [fileName]="fileName">
     </app-download-button>

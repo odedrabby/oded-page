@@ -1,14 +1,17 @@
 <div id="con">
     <app-text-button
         [name]="songName"
+        [height]="50"
         [width]="songNameWidth">
     </app-text-button>
     <app-lyrics-box [lyrics]="songLyrics"></app-lyrics-box>
     <app-video-box *ngIf="isVideo"></app-video-box>
     <app-text-button
+        id="download-button"
         [type]="downloadButton"
         [name]="downloadText"
-        [width]="120"
+        [height]="30"
+        [width]="70"
         [pathToFile]="pathToFile"
         [fileName]="songName">
     </app-text-button>
