@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { seasonsLyrics, seasonsName, springLyrics, springName } from '../assets/strings';
+import { seasonsLyrics, seasonsName, seasonsPath, springLyrics, springName, springPath } from '../assets/strings';
 
 @Component({
     selector: 'app-root',
@@ -12,10 +12,10 @@ export class AppComponent {
     seasonsName = seasonsName
     seasonsLyrics = seasonsLyrics
     seasonsWidth = 120
-    seasonsPath = 'assets/text.txt'
-    
+    seasonsPath = seasonsPath
+
     springName = springName
     springWidth = 220
     springLyrics = springLyrics
-    springPath = 'assets/text.txt'
+    springPath = springPath
 }

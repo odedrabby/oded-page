@@ -7,6 +7,25 @@ app-music-player {
 }
 
 
+#section-con {
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#section {
+    opacity: .3;
+    height: 1px;
+    background: var(--blue);
+    border-radius: 20px;
+    width: 60vw;
+}
+
+#padding {
+    height: 10vh;
+}
+
 @media screen and (min-width: 500px) {
     app-music-player {
         bottom: 5%;
@@ -16,5 +35,9 @@ app-music-player {
         width: 500px;
         border-radius: 20px;
         overflow: hidden;
+    }
+
+    #padding {
+        height: 20vh;
     }
 }

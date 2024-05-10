@@ -13,6 +13,7 @@
     --grass-green: #A5B89Bff;
     --grass-green-dark: rgb(138, 153, 129);
     --bush-dark: #6A7156ff;
+    --blue: rgb(54, 173, 212);
     --hill-purple: #A79588ff; // ??
 
     // border
@@ -20,7 +21,7 @@
 }
 
 body {
-    background: linear-gradient(180deg, var(--sky-white) 10%, var(--grass-green) 100%);
+    background: linear-gradient(180deg, var(--sky-white) 10%, var(--grass-green) 150%);
     margin: 0;
     padding: 0;
 }
