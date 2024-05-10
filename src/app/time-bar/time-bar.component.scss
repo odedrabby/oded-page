@@ -16,8 +16,24 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    height: 80%;
+    height: 60%;
     aspect-ratio: 1/1;
     border-radius: 50%;
     background: black;
+}
+
+.halo {}
+
+.halo:before {
+    opacity: 0.2;
+    background: black;
+    content: "";
+    height: 250%;
+    aspect-ratio: 1/1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 3;
+    border-radius: inherit;
 }

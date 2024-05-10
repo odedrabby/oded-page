@@ -44,7 +44,9 @@ export class TimeBarComponent {
   }
 
   private sendPercent(mouseX: number) {
-    if (!this.isDown || !this.bar) return
+    if (!this.isDown || !this.bar || !this.dot) return
+
+    this.dot.nativeElement.classList.add("halo")
 
     const rect = this.bar.nativeElement.getBoundingClientRect();
 
@@ -77,6 +79,9 @@ export class TimeBarComponent {
   handleUp() {
     this.isDown = false
     this.dotMoveEnd.emit(true)
+
+    this.dot?.nativeElement.classList.remove("halo")
+
   }
 
   mousedown = (e: PointerEvent) => {
