@@ -11,5 +11,5 @@
     </defs>
 </svg>
 <app-play-button [isPlaying]="isPlaying"></app-play-button>
-<app-time-bar [percent]="percent" (dotEvent)="seek($event)"></app-time-bar>
+<app-time-bar [percent]="percent" (dotMove)="seek($event)" (dotMoveEnd)="seekEnd($event)"></app-time-bar>
 <audio #player></audio>

@@ -11,7 +11,8 @@ function clamp(value: number, min: number, max: number): number {
 })
 export class TimeBarComponent {
   @Input() percent!: number
-  @Output() dotEvent = new EventEmitter<number>();
+  @Output() dotMove = new EventEmitter<number>();
+  @Output() dotMoveEnd = new EventEmitter<boolean>();
   @ViewChild("bar") bar?: ElementRef<HTMLDivElement>
   @ViewChild("dot") dot?: ElementRef<HTMLDivElement>
 
@@ -54,7 +55,7 @@ export class TimeBarComponent {
 
     const localPercent = newX * 100 / rect.width
 
-    this.dotEvent.emit(localPercent);
+    this.dotMove.emit(localPercent);
   }
 
   getLeft = (percent: number): string => {
@@ -75,11 +76,13 @@ export class TimeBarComponent {
 
   handleUp() {
     this.isDown = false
+    this.dotMoveEnd.emit(true)
   }
 
   mousedown = (e: PointerEvent) => {
     this.isDown = true
     this.sendPercent(e.x)
+    this.dotMoveEnd.emit(false)
   }
 }
 

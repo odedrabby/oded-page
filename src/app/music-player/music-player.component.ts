@@ -12,17 +12,19 @@ export const playPause = "playPause"
 })
 export class MusicPlayerComponent {
   @ViewChild("player") playerRef!: ElementRef<HTMLAudioElement>
-  percent = 0
+  private _percent = 0
   isPlaying: boolean = false
+  newTime = 0
+  private _mouseIsUp = true
 
-  private messageSubscription!: Subscription;
+  private _messageSubscription!: Subscription;
 
   private currentTimeListener: (() => void) | undefined;
 
   constructor(private ss: SharedService) { }
 
   ngOnInit() {
-    this.messageSubscription = this.ss.message$.subscribe(this.handleEvent);
+    this._messageSubscription = this.ss.message$.subscribe(this.handleEvent);
   }
 
   ngAfterViewInit() {
@@ -39,7 +41,7 @@ export class MusicPlayerComponent {
   }
 
   ngOnDestroy() {
-    this.messageSubscription.unsubscribe()
+    this._messageSubscription.unsubscribe()
 
     if (this.currentTimeListener) {
       const audioElement = this.playerRef.nativeElement;
@@ -53,8 +55,15 @@ export class MusicPlayerComponent {
       this.playerRef.nativeElement.currentTime = 0
     }
 
-    const currentTime = this.playerRef.nativeElement.currentTime;
-    this.percent = currentTime / this.playerRef.nativeElement.duration * 100
+    if (this._mouseIsUp) this.percent = this.playerRef.nativeElement.currentTime;
+  }
+
+  set percent(time: number) {
+    this._percent = time / this.playerRef.nativeElement.duration * 100
+  }
+
+  get percent() {
+    return this._percent
   }
 
   handleEvent = (msg: string) => {
@@ -96,8 +105,18 @@ export class MusicPlayerComponent {
   }
 
   seek = (percent: number) => {
-    const newTime = this.playerRef.nativeElement.duration * (percent / 100)
-    this.playerRef.nativeElement.currentTime = newTime
+    this.newTime = this.playerRef.nativeElement.duration * (percent / 100)
+    this.percent = this.newTime
+  }
+
+  seekEnd = (isEnded: boolean) => {
+    if (isEnded) {
+      this._mouseIsUp = true
+      this.playerRef.nativeElement.currentTime = this.newTime
+    }
+    else {
+      this._mouseIsUp = false
+    }
   }
 
 }
