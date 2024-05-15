@@ -7,10 +7,10 @@ import { Component, Input } from '@angular/core';
 })
 export class lyricsBoxComponent {
   @Input() lyrics: string[] = ["test"]
-  
+
   isOpen: boolean = false
 
-  get height() :string {
+  get height(): string {
     return this.isOpen ? '' : "35vh"
   }
 

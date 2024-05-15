@@ -1,10 +1,11 @@
 <div id="con" [style.height]="height">
   <div id="text-con">
-    <p *ngFor="let l of lyrics">
-        {{ l }}
-    </p>
+    <div *ngFor="let l of lyrics; let i = index">
+      <p *ngIf="l">{{ l }}</p>
+      <div id="space" *ngIf="!l"></div>
+    </div>
   </div>
-  <button (click)="toggle()"> 
+  <button (click)="toggle()">
     <div class="dot"></div>
     <div class="dot"></div>
     <div class="dot"></div>

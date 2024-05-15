@@ -12,9 +12,19 @@
     padding: 30px;
 }
 
+p {
+    margin: 0;
+}
+
+#space {
+    height: 20px;
+    // background: red;
+}
+
 #text-con {
     display: flex;
     flex-direction: column;
+    justify-content: start;
     align-items: center;
     width: 100%;
     height: 95%;

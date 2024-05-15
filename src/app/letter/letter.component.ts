@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class LetterComponent {
     readonly imgPath = 'assets/main-background.jpg'
-    readonly title = 'שם זמני - גל כהן פרירא';
+    readonly title = '"שם זמני" - גל כהן פרירא';
     readonly subtitle = 'מכתב מגל';
     readonly letter1 = `שלום אנשים יקרים מאוד,`
     readonly letter2 = `בקרוב ייצא אלבומי הראשון - "שם זמני" - אלבום שלקח לי 30 שנה לכתוב ועוד שנה לייצר ולשחרר אליכם. הוא יהיה פתח קטן להציץ אל חוויותי בעולם עד כה דרך התבוננות על הטבע, על האדם, על עצמי ועל עצם קיומי הזמני.`

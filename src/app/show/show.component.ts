@@ -7,7 +7,7 @@ import { showDetails } from '../../assets/strings';
   styleUrl: './show.component.scss'
 })
 export class ShowComponent {
-  title = "הופעה"
+  title = "מופע השקה חגיגי"
   details = showDetails
   tickets = "כרטיסים"
   ticketsLink = "https://pigumim.org.il/"
