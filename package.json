@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "stage": " ng deploy --no-silent --repo=https://github.com/arikhativa/arikhativa.github.io --branch=main",
-    "prod": " ng deploy --no-silent --repo=https://github.com/GalCParaira/GalCParaira.github.io --branch=main",
+    "prod": " ng deploy --no-silent --repo=https://github.com/GalCParaira/GalCParaira.github.io --branch=prod",
     "serve:ssr:GalsLandingPage": "node dist/gals-landing-page/server/server.mjs"
   },
   "private": true,
