@@ -1,11 +1,12 @@
 #letter-con {
-    height: 100vh;
+    height: 100svh;
 }
 
 #img-con {
     margin: 0;
     padding: 0;
     position: absolute;
+    height: 100vh;
     height: 100vh;
     width: 100%;
     z-index: -1;
@@ -22,11 +23,6 @@
 
 h1 {
     height: 25px;
-    // color: var(--brown);
-}
-
-h2 {
-    // color: var(--reseda-green);
 }
 
 #title-con {
