@@ -10,6 +10,15 @@
     justify-content: top;
     overflow: hidden;
     padding: 30px;
+    transition: max-height 2s ease-in-out;
+}
+
+#con.open {
+    max-height: 200vh;
+}
+
+#con.closed {
+    max-height: 360px;
 }
 
 p {
@@ -18,7 +27,6 @@ p {
 
 #space {
     height: 20px;
-    // background: red;
 }
 
 #text-con {

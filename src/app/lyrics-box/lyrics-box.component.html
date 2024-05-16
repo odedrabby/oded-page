@@ -1,4 +1,4 @@
-<div id="con" [style.height]="height">
+<div id="con" [ngClass]="{'open': isOpen, 'closed': !isOpen}">
   <div id="text-con">
     <div *ngFor="let l of lyrics; let i = index">
       <p *ngIf="l">{{ l }}</p>

@@ -23,22 +23,22 @@ export class TimeBarComponent {
     this.renderer = rendererFactory.createRenderer(null, null);
   }
 
-  @HostListener('document:mousemove', ['$event'])
+  @HostListener('mousemove', ['$event'])
   onMouseMove(e: MouseEvent) {
     this.sendPercent(e.x)
   }
 
-  @HostListener('document:touchmove', ['$event'])
+  @HostListener('touchmove', ['$event'])
   onTouchMove(e: TouchEvent) {
     this.sendPercent(e.touches[0].clientX)
   }
 
-  @HostListener('document:touchend', ['$event'])
+  @HostListener('touchend', ['$event'])
   onTouchEnd() {
     this.handleUp()
   }
 
-  @HostListener('document:mouseup', ['$event'])
+  @HostListener('mouseup', ['$event'])
   onMouseUp() {
     this.handleUp()
   }
@@ -68,7 +68,7 @@ export class TimeBarComponent {
     const dotRect = this.dot.nativeElement.getBoundingClientRect();
     const width = (rect.width - dotRect.width)
 
-    const newX = (width) / 100 * percent
+    const newX = Math.round((width) / 100 * percent)
     return `${newX}px`;
   }
 
@@ -79,9 +79,7 @@ export class TimeBarComponent {
   handleUp() {
     this.isDown = false
     this.dotMoveEnd.emit(true)
-
     this.dot?.nativeElement.classList.remove("halo")
-
   }
 
   mousedown = (e: PointerEvent) => {
