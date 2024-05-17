@@ -18,6 +18,7 @@ export class SocialComponent {
     width: '40px'
   }
 
+  // TODO
   async copyEmail() {
     const email = 'galoscohen@gmail.com';
     try {
