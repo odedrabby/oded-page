@@ -12,7 +12,7 @@ import { BodyModule } from './body/body.module';
     imports: [
         BrowserModule,
         AppRoutingModule,
-        BodyModule
+        BodyModule,
     ],
     providers: [
         provideClientHydration()

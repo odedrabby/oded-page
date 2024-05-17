@@ -10,6 +10,8 @@ import { DownloadButtonComponent } from '../download-button/download-button.comp
 import { ShowComponent } from '../show/show.component';
 import { MusicPlayerComponent } from '../music-player/music-player.component';
 import { TimeBarComponent } from '../time-bar/time-bar.component';
+import { SocialComponent } from '../social/social.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -25,15 +27,18 @@ import { TimeBarComponent } from '../time-bar/time-bar.component';
         ShowComponent,
         MusicPlayerComponent,
         TimeBarComponent,
+        SocialComponent,
     ],
     imports: [
         CommonModule,
+        FontAwesomeModule
     ],
     exports: [
         LetterComponent,
         SongComponent,
         MusicPlayerComponent,
         ShowComponent,
+        SocialComponent,
     ]
 })
 export class BodyModule { }
