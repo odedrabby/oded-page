@@ -81,8 +81,12 @@ export const springLyrics = [
   '',
 ]
 
+export const oldDetails = [
+  '(תיאטרון תמונע 2.7.24)',
+]
+
 export const showDetails = [
-  'תיאטרון תמונע 2.7.24',
+  'תיאטרון תמונע 18.7.24',
 ]
 
 export const seasonsName = "עונות"

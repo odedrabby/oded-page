@@ -17,3 +17,19 @@
     width: 100%;
     object-fit: cover;
 }
+
+a {
+    font-size: 30px;
+}
+
+#text-con {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: center;
+}
+
+#old {
+    font-size: 20px;
+    text-decoration: line-through
+}
