@@ -1,4 +1,8 @@
 
+
+
+
+
 export const seasonsLyrics = [
   'גשם בא בעמקים',
   'דרך שפע הסדקים',
@@ -89,7 +93,7 @@ export const showDetails = [
   'תיאטרון תמונע 18.7.24',
 ]
 
-export const seasonsName = "עונות"
+export const seasonsName = "שיר"
 
 export const springName = "כשלונו של האביב"
 

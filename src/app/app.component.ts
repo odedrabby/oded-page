@@ -7,7 +7,7 @@ import { seasonsLyrics, seasonsName, seasonsPath, springLyrics, springName, spri
     styleUrl: './app.component.scss'
 })
 export class AppComponent {
-    title = 'GalsLandingPage';
+    title = 'oded rabby';
 
     seasonsName = seasonsName
     seasonsLyrics = seasonsLyrics

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "GalsLandingPage": {
+    "OdedRabby": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -74,10 +74,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "GalsLandingPage:build:production"
+              "buildTarget": "OdedRabby:build:production"
             },
             "development": {
-              "buildTarget": "GalsLandingPage:build:development"
+              "buildTarget": "OdedRabby:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -85,7 +85,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "GalsLandingPage:build"
+            "buildTarget": "OdedRabby:build"
           }
         },
         "test": {
