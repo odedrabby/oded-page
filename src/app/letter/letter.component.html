@@ -1,14 +1,11 @@
-<div id="img-con">
-    <img src="{{ imgPath }}">
-</div>
 <div id="letter-con">
     <div id="title-con">
         <h1> {{ title }} </h1>
     </div>
     <div id="letter-text-con">
-        <p id="line1"> {{ letter1 }} </p>
-        <p id="line2"> {{ letter2 }} </p>
-        <p> {{ letter3 }} </p>
-        <p> {{ letter4 }} </p>
+        <p> {{ paragraph }} </p>
     </div>
+    <a href="{{album}}">
+        <img [style.width]="width" [style.height]="height" src="{{path}}">
+    </a>
 </div>

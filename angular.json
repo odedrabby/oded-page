@@ -24,7 +24,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/gals-landing-page",
+            "outputPath": "dist/oded-page",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [

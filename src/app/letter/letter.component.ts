@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { album, introParagraph, introTitle, pathToCover } from '../../assets/strings';
 
 @Component({
     selector: 'app-letter',
@@ -6,10 +7,10 @@ import { Component } from '@angular/core';
     styleUrl: './letter.component.scss'
 })
 export class LetterComponent {
-    readonly imgPath = 'assets/main-background.jpg'
-    readonly title = '"oded rabby"';
-    readonly letter1 = `שלום אנשים יקרים מאוד,`
-    readonly letter2 = `בקרוב ייצא אלבומי הראשון - "שם זמני" - אלבום שלקח לי 30 שנה לכתוב ועוד שנה לייצר ולשחרר אליכם. הוא יהיה פתח קטן להציץ אל חוויותי בעולם עד כה דרך התבוננות על הטבע, על האדם, על עצמי ועל עצם קיומי הזמני.`
-    readonly letter3 = `עד שייצא האלבום בשלמותו, תוכלו לשמוע כאן את "עונות", שיר שכמו מסכם את האלבום, ואת הממתיק המריר - "כישלונו של האביב". אולי תמצאו בהם אותי ואולי את עצמכם (אמן). נתראה בקרוב בשבילים, בהופעות או שפשוט תבואו לקפה.`
-    readonly letter4 = "שלכם, גל כהן פרירא."
+    readonly title = introTitle;
+    readonly paragraph = introParagraph
+    readonly path = pathToCover
+    readonly album = album
+    readonly width = '300px'
+    readonly height = '300px'
 }

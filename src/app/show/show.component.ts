@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { oldDetails, showDetails } from '../../assets/strings';
+import { showDetails } from '../../assets/strings';
 
 @Component({
   selector: 'app-show',
@@ -9,7 +9,6 @@ import { oldDetails, showDetails } from '../../assets/strings';
 export class ShowComponent {
   title = "מופע השקה חגיגי"
   details = showDetails
-  oldDetails = oldDetails
   tickets = "כרטיסים"
   ticketsLink = "https://www.tmu-na.org.il/?CategoryID=102&ArticleID=5954"
 }

@@ -12,7 +12,7 @@ export class SongComponent {
   @Input() downloadText: string = "mp3"
   @Input() songName: string = "songName"
   @Input() songLyrics: string[] = ["songLyrics"]
-  @Input() isVideo?: boolean;
+  @Input() isVideo?: boolean = false;
   downloadButton = TextButtonComponentIcon.DOWNLOAD
 
 }

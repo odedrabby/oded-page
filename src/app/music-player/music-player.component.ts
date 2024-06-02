@@ -1,7 +1,7 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { SharedService } from '../shared.service';
 import { Subscription } from 'rxjs';
-import { seasonsName, seasonsPath, springName, springPath } from '../../assets/strings';
+import { discoName, discoPath } from '../../assets/strings';
 
 export const playPause = "playPause"
 
@@ -28,7 +28,7 @@ export class MusicPlayerComponent {
   }
 
   ngAfterViewInit() {
-    this.playerRef.nativeElement.src = seasonsPath
+    this.playerRef.nativeElement.src = discoPath
 
     const audioElement = this.playerRef.nativeElement;
 
@@ -68,11 +68,8 @@ export class MusicPlayerComponent {
 
   handleEvent = (msg: string) => {
     switch (msg) {
-      case seasonsName:
-        this.loadTrack(seasonsPath)
-        break
-      case springName:
-        this.loadTrack(springPath)
+      case discoName:
+        this.loadTrack(discoPath)
         break
       case playPause:
         this.playPause()

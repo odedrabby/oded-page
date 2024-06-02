@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { seasonsLyrics, seasonsName, seasonsPath, springLyrics, springName, springPath } from '../assets/strings';
+import { discoLyrics, discoName, discoPath, linkTree, linkTreePath } from '../assets/strings';
 
 @Component({
     selector: 'app-root',
@@ -7,15 +7,11 @@ import { seasonsLyrics, seasonsName, seasonsPath, springLyrics, springName, spri
     styleUrl: './app.component.scss'
 })
 export class AppComponent {
-    title = 'oded rabby';
+    discoPath = discoPath
+    discoName = discoName
+    discoLyrics = discoLyrics
+    discoWidth = 200
+    linkTree = linkTree
+    linkTreePath = linkTreePath
 
-    seasonsName = seasonsName
-    seasonsLyrics = seasonsLyrics
-    seasonsWidth = 120
-    seasonsPath = seasonsPath
-
-    springName = springName
-    springWidth = 220
-    springLyrics = springLyrics
-    springPath = springPath
 }
