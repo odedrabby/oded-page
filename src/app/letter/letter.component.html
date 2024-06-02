@@ -1,6 +1,7 @@
 <div id="letter-con">
     <div id="title-con">
-        <h1 *ngFor="let t of title"> {{ t }} </h1>
+        <h2>{{title[0]}} </h2>
+        <h1>{{title[1]}} </h1>
     </div>
     <div id="img-con">
         <img [style.width]="width" [style.height]="height" src="{{path}}">
