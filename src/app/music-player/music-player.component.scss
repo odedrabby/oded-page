@@ -18,3 +18,11 @@ app-time-bar {
     height: 20%;
     transform: translateX(-50%);
 }
+
+#right {
+    stop-color: var(--primary);
+}
+
+#left {
+    stop-color: var(--secondary);
+}
