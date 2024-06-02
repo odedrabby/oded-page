@@ -58,7 +58,8 @@ export const facebook = 'https://www.facebook.com/OdedRabbyMusic/'
 export const instagram = 'https://www.instagram.com/odedrabby/'
 export const linkTree = 'https://linktr.ee/odedrabby'
 export const linkTreePath = 'assets/linktreeLogo.png'
-export const shever = 'https://linktr.ee/shvrrecords'
+export const shvrLink = 'https://linktr.ee/shvrrecords'
+export const shvrBigPath = 'assets/shvrFullLogo.png'
 export const email = 'odedrabbymusic@gmail.com'
 
 

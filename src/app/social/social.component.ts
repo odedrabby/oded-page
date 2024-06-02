@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Styles } from '@fortawesome/fontawesome-svg-core';
 import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { email, facebook, instagram, shever } from '../../assets/strings';
+import { email, facebook, instagram, shvrLink } from '../../assets/strings';
 
 @Component({
   selector: 'app-social',
@@ -16,7 +16,7 @@ export class SocialComponent {
 
   facebook = facebook
   instagram = instagram
-  shever = shever
+  shvrLink = shvrLink
   email = email
 
   style: Styles = {
