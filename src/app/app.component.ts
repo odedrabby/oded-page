@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { discoLyrics, discoName, discoPath, linkTree, linkTreePath } from '../assets/strings';
+import { discoLyrics, discoName, discoPath, linkTree, linkTreePath, profilePicPath } from '../assets/strings';
 
 @Component({
     selector: 'app-root',
@@ -13,5 +13,6 @@ export class AppComponent {
     discoWidth = 200
     linkTree = linkTree
     linkTreePath = linkTreePath
+    profilePicPath = profilePicPath
 
 }

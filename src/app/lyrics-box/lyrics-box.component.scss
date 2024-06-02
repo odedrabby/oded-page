@@ -1,8 +1,7 @@
 #con {
-    border: var(--grass-green-dark) solid 3px;
     position: relative;
     width: 100%;
-    background: var(--grass-green);
+    background: var(--background-light);
     border-radius: var(--br);
     display: flex;
     flex-direction: column;
@@ -45,20 +44,20 @@ p {
     max-height: 20%;
     position: absolute;
     bottom: 50px;
-    background: linear-gradient(transparent 0, var(--grass-green));
+    background: linear-gradient(transparent 0, var(--background-light));
 }
 
 #btn-con {}
 
 button .dot {
-    background: black;
+    background: var(--text-dark);
     border-radius: 50%;
     height: 3px;
     aspect-ratio: 1/1;
 }
 
 button {
-    background: var(--grass-green-dark);
+    background: var(--background-dark);
     display: flex;
     justify-content: center;
     align-items: center;

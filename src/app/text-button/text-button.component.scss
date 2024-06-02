@@ -1,12 +1,14 @@
 #con {
     border-radius: 200px;
-    background: var(--sky-blue);
+    background: var(--primary);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row-reverse;
     -webkit-tap-highlight-color: transparent;
     cursor: pointer;
+    box-sizing: border-box;
+
 }
 
 #con:active {

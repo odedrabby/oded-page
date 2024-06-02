@@ -1,26 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alef:wght@400;700&display=swap');
 
 :root {
     direction: rtl;
-    font-family: "Amatic SC", sans-serif;
-    font-weight: 700;
+    font-family: "Alef", sans-serif;
+    // font-weight: 400;
     font-style: normal;
+    color: var(--text);
 
     // colors
-    --sky-white: #E7E8ECff;
-    --sky-blue: #B1BBC5ff;
-    --tree-green: #D8D9C0ff;
-    --grass-green: #A5B89Bff;
-    --grass-green-dark: rgb(138, 153, 129);
-    --bush-dark: #6A7156ff;
-    --blue: rgb(54, 173, 212);
+    // --text: #ffffff;
+    // --background: #000000;
+    // --primary: #9b0000;
+    // --secondary: #0d0067;
+    // --accent: #CDC661;
+
+    --text: hsl(0, 0%, 100%);
+    --text-dark: hsl(0, 0%, 50%);
+    --background: hsl(0, 0%, 5%);
+    --background-light: hsl(0, 0%, 10%);
+    --background-dark: hsl(0, 0%, 0%);
+    --primary: hsl(0, 100%, 30%);
+    --primary-dark: hsl(0, 100%, 20%);
+    --primary-light: #c26666; // TODO bad
+    --secondary: hsl(248, 100%, 20%);
+    --accent: hsl(56, 52%, 59%);
 
     // border
     --br: 20px
 }
 
 body {
-    background: linear-gradient(180deg, var(--sky-white) 10%, var(--grass-green) 150%);
+    background: var(--background);
     margin: 0;
     padding: 0;
 }
@@ -34,9 +44,20 @@ h1 {
 }
 
 h2 {
-    font-size: 34px;
+    font-size: large;
+}
+
+h3 {
+    font-size: small;
 }
 
 p {
-    font-size: 32px;
+    font-size: large;
 }
+
+
+// @media screen and (max-width: 550px) {
+//     p {
+//         font-size: 26px;
+//     }
+// }

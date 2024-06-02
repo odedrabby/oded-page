@@ -34,12 +34,21 @@ export const discoLyrics = [
 ]
 
 // Letter
-export const introTitle = 'עודד רבי';
-export const introParagraph = [
-  'עודד תביא לי טקסט',
-  'דחוףףףף',
+export const introTitle = [
+  'עודד רבי',
+  'דיסקו מקלטים',
 ]
+export const introParagraph = [
+  'את "דיסקו מקלטים" צריך לשמוע בנסיעה לילית באוטו, ועדיף באיזשהו מרחב כפרי.',
+  'הוא מורכב מנוף הילדות שלי, מאהבה וגם מאובדן, יש בו סיפור משפחתי, שאלות, התחייבות וגעגוע.',
+  'הוא נשמע עצוב אבל לדעתי הוא שמח, והוא יוצא כסינגל מתוך מתוך האלבום "הכביש הישן".',
+]
+
 export const pathToCover = 'assets/disco-cover.jpg';
+
+
+// Profile
+export const profilePicPath = 'assets/oded.jpg'
 
 
 // Social
@@ -47,7 +56,6 @@ export const facebook = 'https://www.facebook.com/OdedRabbyMusic/'
 export const instagram = 'https://www.instagram.com/odedrabby/'
 export const linkTree = 'https://linktr.ee/odedrabby'
 export const linkTreePath = 'assets/linktreeLogo.png'
-export const album = 'https://fanlink.tv/HakvishHaYashan'
 export const shever = 'https://linktr.ee/shvrrecords'
 export const email = 'odedrabbymusic@gmail.com'
 

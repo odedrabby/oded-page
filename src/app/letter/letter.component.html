@@ -1,11 +1,15 @@
 <div id="letter-con">
     <div id="title-con">
-        <h1> {{ title }} </h1>
+        <h1 *ngFor="let t of title"> {{ t }} </h1>
     </div>
-    <div id="letter-text-con">
-        <p> {{ paragraph }} </p>
-    </div>
-    <a href="{{album}}">
+    <div id="img-con">
         <img [style.width]="width" [style.height]="height" src="{{path}}">
-    </a>
+    </div>
+
+    <div id="letter-text-con">
+        <div *ngFor="let l of paragraph; let i = index">
+            <p *ngIf="l">{{ l }}</p>
+            <div id="space" *ngIf="!l"></div>
+        </div>
+    </div>
 </div>

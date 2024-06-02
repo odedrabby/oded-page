@@ -14,7 +14,7 @@ hr.line {
     margin-top: 40px;
     margin-bottom: 40px;
     border: none;
-    background: linear-gradient(90deg, rgba(106, 113, 86, 0.2) 0%, rgba(106, 113, 86, .8) 50%, rgba(106, 113, 86, 0.2) 100%);
+    background: linear-gradient(90deg, var(--secondary) 0%, var(--secondary) 50%, var(--secondary) 100%);
     border-radius: 200px;
     width: 160px;
     height: 2px;
@@ -28,7 +28,7 @@ hr.line:before {
     content: "";
     width: 10px;
     aspect-ratio: 1;
-    background-color: var(--bush-dark);
+    background-color: var(--secondary);
     border-radius: 2px;
     transform: rotate(45deg);
 }
@@ -43,6 +43,21 @@ app-music-player {
     right: -1px;
     aspect-ratio: 4/1;
     width: 101vw;
+}
+
+
+// Bad TODO move this
+#profile-img-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+}
+
+#profile-img {
+    width: 300px;
+    aspect-ratio: 1;
+    object-fit: cover;
 }
 
 

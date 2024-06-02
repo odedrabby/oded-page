@@ -1,6 +1,6 @@
 #letter-con {
-    height: 100vh;
-    height: 100svh;
+    // height: 100vh;
+    // height: 100svh;
 }
 
 h1 {
@@ -9,13 +9,21 @@ h1 {
 
 #title-con {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 #letter-text-con {
     max-width: 800px;
-    margin: 4vmin;
+    margin: 20px;
+}
+
+#img-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
 }
 
 img {
@@ -23,10 +31,4 @@ img {
     aspect-ratio: 1;
     // object-position: 85% center;
     // object-fit: cover;
-}
-
-@media screen and (max-width: 550px) {
-    p {
-        font-size: 26px;
-    }
 }
