@@ -1,4 +1,10 @@
-#letter-con {}
+#letter-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0;
+}
 
 h1,
 h2 {
@@ -7,7 +13,6 @@ h2 {
 }
 
 #title-con {
-    margin-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,8 +20,8 @@ h2 {
 }
 
 #letter-text-con {
-    max-width: 800px;
-    margin: 40px;
+    max-width: 600px;
+    margin: 0 40px;
 }
 
 #img-con {
