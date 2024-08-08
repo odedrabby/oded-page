@@ -16,6 +16,7 @@
 }
 
 #text-button-con {
+    padding-left: 4px;
     flex: 1;
     height: inherit;
     display: flex;
@@ -23,17 +24,14 @@
     align-items: center;
 }
 
-app-download-button,
 app-play-button {
     height: 40px;
     aspect-ratio: 1/1;
-    right: 5px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    padding-right: 4px;
 }
 
 app-download-button {
     height: 23px;
-    right: 4px;
+    aspect-ratio: 1/1;
+    padding-right: 3px;
 }

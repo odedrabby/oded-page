@@ -10,10 +10,9 @@
     <app-text-button id="download-button" [type]="downloadButton" [name]="'mp3'" [height]="30" [width]="70"
         [pathToFile]="discoPath" [fileName]="discoName">
     </app-text-button>
-
     <div id="letter-text-con">
         <div *ngFor="let l of paragraph; let i = index">
-            <p *ngIf="l">{{ l }}</p>
+            <p *ngIf="l" [innerHTML]="l"></p>
             <div id="space" *ngIf="!l"></div>
         </div>
     </div>

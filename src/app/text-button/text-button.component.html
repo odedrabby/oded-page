@@ -7,8 +7,6 @@
             {{ name }}
         </h4>
     </div>
-    <div id="dummy" [style.width]="isDownload ? 20 + 'px' : 35 + 'px'">
-    </div>
     <app-play-button *ngIf="isPlay" [songName]="name">
     </app-play-button>
     <app-download-button *ngIf="isDownload" [height]="height" [pathToFile]="pathToFile" [fileName]="fileName">
