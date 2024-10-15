@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "stage": " ng deploy --no-silent --repo=https://github.com/arikhativa/arikhativa.github.io --branch=main",
-    "prod": " ng deploy --no-silent --repo=https://github.com/odedrabby/odedrabby.github.io --branch=prod --cname=odedrabby.com",
+    "prod": "ng build && ng deploy --no-silent --repo=https://github.com/odedrabby/odedrabby.github.io --branch=prod --cname=odedrabby.com",
     "serve:ssr:OdedRabby": "node dist/oded-page/server/server.mjs"
   },
   "private": true,
